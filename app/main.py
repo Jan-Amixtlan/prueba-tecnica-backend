@@ -8,7 +8,11 @@ app = FastAPI(title="Cardan Is Leader In Auto Repair")
 # Configuración de CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:5180"],  # Agrega el puerto 5180
+    allow_origins=[
+        "http://localhost:5173",
+        "http://localhost:5180",
+        "https://prueba-tecnica-frontend-iota.vercel.app"
+    ],  # Permite peticiones desde Vercel
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]
